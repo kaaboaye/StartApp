@@ -1,4 +1,7 @@
-﻿namespace StartApp
+﻿using System;
+using System.Diagnostics;
+
+namespace StartApp
 {
     class Program
     {
@@ -6,7 +9,14 @@
         {
             foreach (string i in args)
             {
-                System.Diagnostics.Process.Start(i);
+                try
+                {
+                    Process.Start(i);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
             }
         }
     }
