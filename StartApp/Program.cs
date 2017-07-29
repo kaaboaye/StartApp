@@ -15,7 +15,7 @@ namespace StartApp
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine(e.Message);
+                    Console.WriteLine($"{i}: {e.Message}");
                 }
             }
         }
